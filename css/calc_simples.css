@@ -15,6 +15,9 @@ body {
 #resultado {
     background-color: rgb(58, 58, 58);
     color: rgb(231, 189, 189);
+    padding: 0;
+    margin: 2px;
+    width: 190px;
 }
 .btn {
     text-align: center;

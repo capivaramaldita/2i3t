@@ -27,7 +27,7 @@ let b = "";
 let valor = "";
 let executar = "";
 temponto = false;
-let desligado = true;
+let desligado = false;
 
 
 soma = (a, b) => Number(a) + Number(b);
@@ -50,13 +50,15 @@ function mostrar_resultado() {
 
 
 function calcular() {
+    if (desligado) return;
+
     if (executar != "") {
         b = valor;
         if (executar == "soma") valor = soma(a, b);
         if (executar == "sub") valor = sub(a, b);
         if (executar == "div") valor = div(a, b);
         if (executar == "mult") valor = mult(a, b);
-        if (executar == "porc") valor = mult(div(Number(a),Number(100)),b);
+        if (executar == "porc") valor = mult(div(Number(a), Number(100)), b);
         if (executar == "raiz") valor = raiz(Number(a));
         mostrar_resultado();
         executar = "";
@@ -70,6 +72,8 @@ function calcular() {
 
 
 function digitando(tecla) {
+    if (desligado) return;
+
     if (tecla == ".") {
         if (!temponto) {
             valor = valor + tecla;
@@ -86,6 +90,8 @@ function digitando(tecla) {
 
 
 function operacao(op) {
+    if (desligado) return;
+
     executar = op;
     a = valor;
     valor = "";
@@ -93,8 +99,10 @@ function operacao(op) {
 }
 
 function desliga() {
+    desligado = !desligado;
+
     if (desligado) {
-        valor = "0";
+        valor = "";
         mostrar_resultado();
         valor = "";
     }
@@ -102,11 +110,15 @@ function desliga() {
         valor = "";
         mostrar_resultado();
 
+        return desligado;
     }
-    desligado = !desligado;
 }
+desliga();
+
 
 function zerar() {
+    if (desligado) return;
+
     a = "";
     b = "";
     valor = "0";
@@ -114,4 +126,21 @@ function zerar() {
     mostrar_resultado();
     valor = "";
 
+}
+
+
+function calcula_raiz() {
+    if (valor == "") {
+        valor = 0;
+    }
+    valor = raiz(valor);
+    mostrar_resultado();
+}
+
+function porcentagem() {
+    if (executar == "mult") {
+        b = valor;
+        valor = div(mult(a,b),100);
+        mostrar_resultado;
+    }
 }
