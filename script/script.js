@@ -99,21 +99,18 @@ function operacao(op) {
 }
 
 function desliga() {
-    desligado = !desligado;
 
     if (desligado) {
-        valor = "";
-        mostrar_resultado();
-        valor = "";
+      desligado = false;
+      zerar();
     }
     else {
-        valor = "";
+        zerar();
         mostrar_resultado();
-
-        return desligado;
+        desligado = true;
     }
 }
-desliga();
+
 
 
 function zerar() {
