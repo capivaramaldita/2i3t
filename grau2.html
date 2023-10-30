@@ -7,32 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>equação 2°grau</title>
 </head>
-
+<link rel="stylesheet" href="css/grau2.css">
 <body>
     <section class="2grau">
         <div>
-            <select name="" id="">
+            <select name="sinal_a" onchange="set_sinal_a()" id="">
                 <option value="+">+</option>
                 <option value="-">-</option>
             </select>
-            <input class="variavel" type="text"> <span> x <sup>2</sup> </span>
+            <input class="variavel" type="number"> <span> x <sup>2</sup> </span>
 
             <select name="" id="">
                 <option value="+">+</option>
                 <option value="-">-</option>
             </select>
-            <input class="variavel" type="text"> <span> x </span>
+            <input class="variavel" type="number"> <span> x </span>
 
             <select name="" id="">
                 <option value="+">+</option>
                 <option value="-">-</option>
             </select>
-            <input class="variavel" type="text"> <span> = 0 </span>
+            <input class="variavel" type="number"> <span> = 0 </span>
         </div>
 
+        <select name="sinal_a" id="sinal_a"></select>
+        <option selected value="+">+</option>
+        <option value="-"></option>
+
+
         
-
-
         <div>
             <span id="delta"> delta = </span>
         </div>
@@ -42,8 +45,6 @@
             <span id="x1">x <sub>1</sub></span>
             <span id="x2">x <sub>2</sub></span>
         </div>
-
-
     </section>
 </body>
 
