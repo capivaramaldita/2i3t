@@ -6,45 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>equação 2°grau</title>
+    <script src="./script/script.js"></script>
+    <link rel="stylesheet" href="./css/grau2.css">
+
 </head>
-<link rel="stylesheet" href="css/grau2.css">
+
 <body>
     <section class="2grau">
+    
         <div>
-            <select name="sinal_a" onchange="set_sinal_a()" id="">
-                <option value="+">+</option>
+            <select name="sinal_a" id="sinal_a" onchange="set_sinal_a()">
+                <option selected value="+">+</option>
                 <option value="-">-</option>
             </select>
-            <input class="variavel" type="number"> <span> x <sup>2</sup> </span>
+            <input class="entrada" type="number"  id="valor_a" onchange="set_valor_a()"> <span>x<sup>2</sup></span>
 
-            <select name="" id="">
-                <option value="+">+</option>
+            <select name="sinal_b" id="sinal_b" onchange="set_sinal_b()">
+                <option selected value="+">+</option>
                 <option value="-">-</option>
             </select>
-            <input class="variavel" type="number"> <span> x </span>
+            <input class="entrada" type="number"  id="valor_b" onchange="set_valor_b()"> <span>x</span>
 
-            <select name="" id="">
-                <option value="+">+</option>
+            <select name="sinal_c" id="sinal_c" onchange="set_sinal_c()">
+                <option selected value="+">+</option>
                 <option value="-">-</option>
             </select>
-            <input class="variavel" type="number"> <span> = 0 </span>
+            <input class="entrada" type="number" id="valor_c" onchange="set_valor_c()"> <span> = 0</span>
         </div>
-
-        <select name="sinal_a" id="sinal_a"></select>
-        <option selected value="+">+</option>
-        <option value="-"></option>
-
-
-        
-        <div>
-            <span id="delta"> delta = </span>
-        </div>
-
 
         <div>
-            <span id="x1">x <sub>1</sub></span>
-            <span id="x2">x <sub>2</sub></span>
+            Delta(&Delta;): <span id="delta"></span>
         </div>
+
+        <div>
+            Resultado: <span id="raiz"></span>
+        </div>
+
+
     </section>
 </body>
 

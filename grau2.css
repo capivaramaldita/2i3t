@@ -4,8 +4,7 @@ body {
 
 }
 .entrada {
-    width: 4opx;
-    border: none;
+    border: 1px solid beige;
     background-color: blanchedalmond;
-    border-bottom: 2px beige;
+
 }
