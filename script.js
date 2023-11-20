@@ -141,3 +141,6 @@ function porcentagem() {
         mostrar_resultado;
     }
 }
+
+
+

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,19 +9,39 @@
     <link rel="stylesheet" href="css/pa.css">
     <script src="script/script.js"></script>
 </head>
+
 <body>
-    <h1>progressao aritmetica</h1>
+    <section></section>
+    <h1>progressatiroo aritmeacenbovinotica</h1>
     P.A. = a<sub>1</sub>,a<sub>2</sub>,a<sub>3</sub>...<br>
-    calculo da razao =  a<sub>1</sub> - a<sub>2</sub> <br>
+    calculo da razao = a<sub>1</sub> - a<sub>2</sub> <br>
     calculo do ultimo numero - a<sub>n</sub> = a<sub>1</sub> . (n - 1) . r<br>
     soma de "n" termos - S<sub>n</sub> = (a<sub>1</sub>+ a<sub>n</sub>) . n /2<br>
 
-          <div class="caluloPA">
-            a <sub>1</sub>: <input onchange="setpa_al()" type="number" name="" id="pa_a1"><br>
-            r = <input onchange="setpa_r" type="number" id="pa_r"><br>
-            n = <input onchange="setpa_n" type="number" id="pa_n"><br>
-            Sequencia: <span id="pa_seq"></span>
-        </div>
+    <div class="caluloPA">
+        a <sub>1</sub>: <input onchange="setpa_a1()" type="number" name="" id="pa_a1"><br>
+        r = <input onchange="setpa_r()" type="number" id="pa_r"><br>
+        n = <input onchange="setpa_n()" type="number" id="pa_n"><br>
+        Sequencia: <span id="pa_seq"></span>
+    </div>
 
+
+
+    <section>
+        <h1>progressatiroo geomeacenbovinotica</h1>
+        P.G. = a<sub>1</sub>,a<sub>2</sub>,...a<sub>3</sub>n<br>
+        calculo da razao = a<sub>1</sub> - a<sub>2</sub> <br>
+        calculo do ultimo numero (n): a<sub>n</sub> = a<sub>1</sub> . q <sup>(n - 1)</sup> <br>
+        soma de "n" termos - S<sub>n</sub> = (a<sub>1</sub>(q<sup>n</sup>) . 1))/q-1<br>
+
+        <div class="caluloPG">
+        a <sub>1</sub>: <input onchange="setpa_a1()" type="number" name="" id="pg_a1"><br>
+        r = <input onchange="setpa_r()" type="number" id="pg_r"><br>
+        n = <input onchange="setpa_n()" type="number" id="pg_n"><br>
+        Sequencia: <span id="pg_seq"></span>
+    </div>
+
+    </section>
 </body>
+
 </html>
